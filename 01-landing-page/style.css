@@ -1,6 +1,8 @@
 body {
     display: flex;
     margin: 0;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -29,4 +31,56 @@ li a {
     text-decoration: none;
     color: black;
     font-size: 24px;
+}
+
+#Home {
+    display:flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: rgb(37, 37, 37);
+    align-items: center;
+    height: 87vh;
+    padding: 0px 36px;
+}
+
+.hello, .major {
+    color: white;
+    font-size: 48px;
+}
+
+.name {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 84px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.icons {
+    width: 35px;
+    height: auto;
+    margin: 20px 8px 110px;
+}
+
+.icon-links {
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.about-button {
+    text-decoration: none;
+    color: black;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.right img {
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
 }
