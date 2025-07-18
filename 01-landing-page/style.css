@@ -2,7 +2,7 @@ body {
     display: flex;
     margin: 0;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -48,7 +48,7 @@ li a {
     font-size: 48px;
 }
 
-.name {
+#Home .name {
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
@@ -83,4 +83,15 @@ li a {
     height: 500px;
     border-radius: 50%;
     display: flex;
+}
+
+#About-Me {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.bodyshot {
+    height: 500px;
+    border-radius: 50%;
 }
