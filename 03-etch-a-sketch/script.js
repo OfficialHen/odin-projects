@@ -1,5 +1,6 @@
 const sizeBtn = document.querySelector("button.size")
 const rgbBtn = document.querySelector("button.color")
+const resetBtn = document.querySelector("button.reset")
 
 let size = 16
 let color = 'rgb(0, 0, 0)'
@@ -12,8 +13,10 @@ function createBoard() {
 
     for (let row = 0; row < size; row++) {
         const rowDiv = document.createElement('div')
+        rowDiv.classList.add('row')
         for (let column = 0; column < size; column++) {
             const columnDiv = document.createElement('div')
+            columnDiv.classList.add('column')
             columnDiv.style.cssText = 'border: 1px solid black; width: 25px; height: 25px;'
             rowDiv.appendChild(columnDiv)
 
@@ -37,7 +40,6 @@ function randomColor() {
     let g = Math.floor(Math.random() * 255)
     let b = Math.floor(Math.random() * 255)
     color = `rgb(${r}, ${g}, ${b})`
-    console.log(color)
 }
 
 sizeBtn.addEventListener('click', () => {
@@ -64,5 +66,17 @@ rgbBtn.addEventListener('click', () => {
     } else {
         rgbMode = false
         rgbBtn.style.backgroundColor = 'lightcoral'
+    }
+})
+
+resetBtn.addEventListener('click', () => {
+    let result = confirm("Are you sure you want to reset?")
+    if (result) {
+        const allColumn = document.querySelectorAll("div.column")
+        allColumn.forEach(column => {
+            column.style.backgroundColor = 'white'
+        })
+    } else {
+        return
     }
 })

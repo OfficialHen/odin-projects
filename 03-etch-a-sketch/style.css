@@ -15,11 +15,15 @@ body {
     gap: 30px;
 }
 
-.size, .color {
+.size, .color, .reset {
     padding: 5px 10px;
     font-size: 16px;
 }
 
 .color {
     background-color: lightcoral;
+}
+
+.reset {
+    background-color: red;
 }
