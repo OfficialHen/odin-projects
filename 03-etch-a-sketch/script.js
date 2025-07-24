@@ -2,8 +2,8 @@ const sizeBtn = document.querySelector("button.size")
 const rgbBtn = document.querySelector("button.color")
 const resetBtn = document.querySelector("button.reset")
 
-let size = 16
-let color = 'rgb(0, 0, 0)'
+let size = 16 // Base size
+let color = 'rgb(0, 0, 0)' // Base color
 let rgbMode = false
 
 function createBoard() {
@@ -17,7 +17,7 @@ function createBoard() {
         for (let column = 0; column < size; column++) {
             const columnDiv = document.createElement('div')
             columnDiv.classList.add('column')
-            columnDiv.style.cssText = 'border: 1px solid black; width: 25px; height: 25px;'
+            columnDiv.style.cssText = 'border: 1px solid black; width: 20px; height: 20px;'
             rowDiv.appendChild(columnDiv)
 
             columnDiv.addEventListener('mouseover', () => {
